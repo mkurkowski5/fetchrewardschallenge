@@ -1,0 +1,18 @@
+/*
+Two questions to investigate with very similar queries:
+• When considering average spend from receipts with 'rewardsReceiptStatus’ of ‘Accepted’ or ‘Rejected’, which is greater?
+• When considering total number of items purchased from receipts with 'rewardsReceiptStatus’ of ‘Accepted’ or ‘Rejected’, which is greater?
+*/
+
+select avg(totalspent) AcceptedAmt from purchases
+where rewardsreceiptstatus = '"""ACCEPTED"""';
+
+select avg(totalspent) RejectedAmt from purchases
+where rewardsreceiptstatus = '"""REJECTED"""';
+
+
+select sum(purchaseditemcount) AcceptedItemCnt from purchases
+where rewardsreceiptstatus = '"""ACCEPTED"""';
+
+select sum(purchaseditemcount) RejectedItemCnt from purchases
+where rewardsreceiptstatus = '"""REJECTED"""';
