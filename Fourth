@@ -1,0 +1,18 @@
+Hello,
+
+TL;DR: Do we have data validation for scanning receipts?  (If not, can we add it?)  Can we adjust our current data storage structure?
+
+I'm looking into our Receipts, Users, and Brand data and I had a couple questions about our current setup:
+  1. What sort of data validation do we perform on receipts that are scanned in?  Is there a way to ensure there is a brand match before we process the
+      receipt?
+  2. I will be speaking more with the data team about this, but are there any objections on the business side to storing our data in a few more schema
+      than we currently do, even if it means adding up to a second of processing time on the frontend?
+
+The context here is that we have several receipts that have "barcode not found" or are flagged and may be holding the key to important trends as to which 
+  of our users are most likely to scan a receipt, which brands they are scanning for, what text or incentives these brands put on the receipt that make
+  users more likely to scan them, etc.  On the data storage side, we would ideally split receipt data into relevant groupings so that when we run queries 
+  to identify trends, they not only run more quickly, but then the business processes or product adjustments we make as a result of those trends will 
+  drive user engagement, which a more robust data structure will be able to handle better than what we have currently.  
+
+Thanks for your help,
+Michael
