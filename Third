@@ -1,0 +1,30 @@
+--Using SQL, we can identify two potential data integrity issues via a couple quick queries
+-- 1) Potential barcode issues
+-- 2) 
+
+--Here we can do a quick check to see at a glance if there are any potential barcode errors
+select case
+when position(':""4011""' in rewardsreceiptitemlist)
+  then "At least one barcode error"
+when position('{""barcode"":' in rewardsreceiptitemlist) = 0
+  then "Probable barcode error"
+else "No barcode error"
+end BarcodeStatus
+from purchases;
+
+--And here we can do another at-a-glance check to see if every entry has a value for purchasedItemCount or totalSpent
+select case
+when count(_id) = count(purchaseditemcount)
+  then "No missing purchasedItemCount data"
+when count(_id) != count(purchaseditemcount)
+  then "Missing purchasedItemCount data"
+  end purchasedItemCountStatus
+from purchases;
+
+select case
+when count(_id) = count(totalspent)
+  then "No missing totalSpent data"
+when count(_id) != count(totalspent)
+  then "Missing totalSpent data"
+  end totalSpentStatus
+from purchases;
