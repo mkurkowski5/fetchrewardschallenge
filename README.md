@@ -41,3 +41,5 @@ And finally, I tackled the fourth requirement as if I were communicating with so
 
 Thank you for your time,
 Michael Kurkowski
+
+P.S., I think there might be an issue with the users.json.gz file - it didn't unzip properly for me.
