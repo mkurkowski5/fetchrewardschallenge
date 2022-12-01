@@ -6,7 +6,7 @@ Thanks for taking the time to review my Data Analyst coding exercise responses.
 I've kept things as straightforward as possible in this repo, so you should be able to find each requirement's response in a separate location.
 
 For the first requirement, you can download a pdf of the relational diagram I've built in the Issues tab above.  
-If you have any issues accessing or viewing it, please email me (mkurkows@alumni.nd.edu) and I will forward it to you asap.
+If you have any issues accessing or viewing it, please email me and I will forward it to you asap.
 The idea here is to keep things simple and accessible, with relevant data together.  
   - the 'Users' data are already pretty succinct, and can be referenced from Receipts
   - 'Brands' contains two columns that explicitly reference other columns, 'brandCode' and 'categoryCode', so I put their references into separate 
